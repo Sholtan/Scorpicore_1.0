@@ -66,6 +66,10 @@ def global_init_of_all_channels_and_pmts_and_fill_txt_file ():
         if max_len_of_list != 6:
             print("WARNING!!! Maximum numbr of neighbors is ", max_len_of_list, " !!!")
     
+
+
+
+
     
 def init_pmts_with_zeros ():
     
@@ -92,7 +96,7 @@ def init_pmts_with_zeros ():
                 amplitude = float(l[11])
                        )
     for channel_item in cc.channel.list_of_channels:
-        if channel_item.number%2 == 0:
+        if channel_item.number%2 == 0:  
             for line in neighbors_matrix:
                 line = line.split()
                 neighbors_global_number = int(line[0])
@@ -105,6 +109,10 @@ def init_pmts_with_zeros ():
                             amplitude = 0,
                             neighbors_list = neighbors_line
                             )
+
+
+
+
 
 def init_pmts_for_event (matrix, event_clean_id):
         

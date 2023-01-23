@@ -21,11 +21,11 @@ TRESHOLD_CLEANING = 4000
 TRESHOLD_FOR_SUM_OF_NEIGHBORS_CLEANING = 20000
 TRESHOLD_FOR_NUM_OF_NEIGHBORS_CLEANING_number = 5
 TRESHOLD_FOR_NUM_OF_NEIGHBORS_CLEANING_amplitude = 3000
-wobble_file = "/home/yaroslav/Yaroslavus_GitHub/DATA/231119.01/pointing_data_2019-11-23_15:46:05.csv"
+wobble_file = "/home/yaroslav/Yaroslavus_GitHub/DATA/231119.01/pointing_data_2019-11-23_15:46:05.csv"  
 # =============================================================================
 #
 # =============================================================================
-day = "231119.01"
+day = "231119"
 START_TIME = tools.what_time_is_now()
 init_all_channels.init_pmts_with_zeros()
 amplitudes_sum = [0]*1000
@@ -46,9 +46,9 @@ with open ("hillas_out.txt", "w+") as fout:
     for tail_number in range (1, last_tail+1):
         
         with open(tools.data_dir() + "/" + day + "/" + "0"*(3 - len(str(tail_number))) + str(tail_number) + "_clean.out", "r") as fin:
-            line = fin.readline().split()
+            line = fin.readline().split()  # reads first line
             matrix = []
-            event_number = line[1]
+            event_number = line[1]   
             print(line[0], event_number)
             for _ in range(23):
                 matrix.append(fin.readline().split())

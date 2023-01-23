@@ -8,7 +8,7 @@ Created on Thu Apr 23 03:12:19 2020
 
 import os
 
-script_dir = os.getcwd()
+script_dir = os.getcwd()   # Return a string representing the current working directory.
 
 class channel:
     

@@ -8,22 +8,22 @@ Created on Tue Oct  5 10:34:48 2021
 
 import os
 
-script_dir = os.getcwd()
+script_dir = os.getcwd()  # Return a string representing the current working directory.
 
-class pmt:
+class pmt:  #   ФЭУ
     
-    list_of_pmts = []
+    list_of_pmts = []  # shared between instances 
 
-    def __init__(self, global_number=0, x=0, y=0, amplitude=0, ignore_status=0, neighbors_list=[], cleaning_status=1, spot_id=0):
+    def __init__(self, global_number=0, x=0, y=0, amplitude=0, ignore_status=0 '''currently not used''', neighbors_list=[], cleaning_status=1, spot_id=0):
 
         self.global_number = global_number
         self.x = x
         self.y = y
-        self.amplitude = amplitude
-        self.neighbors_list = neighbors_list
-        self.cleaning_status = cleaning_status
-        self.spot_id = spot_id
-        self.list_of_pmts.append (self)
+        self.amplitude = amplitude  # ???
+        self.neighbors_list = neighbors_list  # ???
+        self.cleaning_status = cleaning_status  #  ???
+        self.spot_id = spot_id  # ???
+        self.list_of_pmts.append (self)  
         
     def show_item (self):
         print("{}\t{}\n{}\t{}\n{}\t{}\n{}\t{}\n{}\t{}".format(
